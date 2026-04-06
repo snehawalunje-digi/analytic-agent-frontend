@@ -9,8 +9,11 @@ import ChatAssistant from "./components/ChatAssist";
 import { Home } from "lucide-react";
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { SiGoogleads } from "react-icons/si";
+import { FiSearch } from "react-icons/fi";
 import GoogleAdsAnalytics from "./components/GoogleAdsAnalytics";
 import Loader from "./components/Loader";
+import FacebookAnalytics from "./components/FacebookAnalytics";
+import SearchConsoleDashboard from "./components/SearchConsoleDashboard";
 
 
 import {
@@ -162,6 +165,12 @@ function App() {
             <NavLink to="/googleAds" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
               <SiGoogleads /> <span>Google Ads Analytics</span>
             </NavLink>
+            <NavLink to="/facebook" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
+              <FaFacebook size={25} /> <span>Facebook Analytics</span>
+            </NavLink>
+            <NavLink to="/search-console" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
+              <FiSearch /> <span>Search Console</span>
+            </NavLink>
           </nav>
         </aside>
          {/* Main Content */}
@@ -217,6 +226,8 @@ function App() {
         />
         <Route path="/instagram" element={<InstagramAnalytics />} />
         <Route path="/googleAds" element={<GoogleAdsAnalytics />} />
+        <Route path="/facebook" element={<FacebookAnalytics />} />
+        <Route path="/search-console" element={<SearchConsoleDashboard />} />
       </Routes>
       </main>
     </div>
